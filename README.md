@@ -36,17 +36,17 @@ The flow is simple, if the commit id (sha) is passed to the application search t
 You only run this command in your terminal:
 
 ```
-docker run 
--e 'AKAMAI_HOST=' 
--e 'AKAMAI_ACCESS_TOKEN=****' 
--e 'AKAMAI_CLIENT_TOKEN=****' 
--e 'AKAMAI_CLIENT_SECRET=****'
--e 'AKAMAI_PURGE_METHOD=invalidate' 
--e 'AKAMAI_PURGE_NETWORK=production' 
--e 'AKAMAI_PURGE_HOSTNAME=www.foo.com' 
--e 'GITHUB_TOKEN=****' 
--e 'GITHUB_ORGANIZATION=EnriqueTejeda' 
--e 'GITHUB_REPOSITORY=FOO-REPO' 
+docker run \
+-e 'AKAMAI_HOST=' \
+-e 'AKAMAI_ACCESS_TOKEN=****' \
+-e 'AKAMAI_CLIENT_TOKEN=****' \
+-e 'AKAMAI_CLIENT_SECRET=****' \
+-e 'AKAMAI_PURGE_METHOD=invalidate' \
+-e 'AKAMAI_PURGE_NETWORK=production' \
+-e 'AKAMAI_PURGE_HOSTNAME=www.foo.com' \ 
+-e 'GITHUB_TOKEN=****' \
+-e 'GITHUB_ORGANIZATION=EnriqueTejeda' \
+-e 'GITHUB_REPOSITORY=FOO-REPO' \
 -e 'GITHUB_BRANCH=master' etejeda/github-akamai-purge:latest
 ```
 
